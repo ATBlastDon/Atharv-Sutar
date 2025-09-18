@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/Atharv.png" />
+  <!-- Alternative (for .ico format) -->
+  <!-- <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" /> -->
+
+  <title>Atharv Balwant Sutar</title>
+  <meta name="description" content="Atharv Sutar — Python | Flutter | AI/ML | Projects & Resume" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* small extra polish */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+    .accent { color: #6D28D9; }
+    
+    /* Custom animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Custom gradient text */
+    .gradient-text {
+      background: linear-gradient(to right, #8B5CF6, #EC4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Skill bar animation */
+    .skill-bar {
+      transition: width 1.5s ease-in-out;
+    }
+  </style>
+</head>
+
+  <body class="bg-neutral-900 text-gray-100 antialiased">
+    <!-- Navigation dots -->
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex flex-col gap-4">
+      <a href="#hero" class="w-3 h-3 rounded-full bg-violet-600 opacity-50 hover:opacity-100 transition-opacity nav-dot active"></a>
+      <a href="#about" class="w-3 h-3 rounded-full bg-violet-600 opacity-50 hover:opacity-100 transition-opacity nav-dot"></a>
+      <a href="#projects" class="w-3 h-3 rounded-full bg-violet-600 opacity-50 hover:opacity-100 transition-opacity nav-dot"></a>
+      <a href="#skills" class="w-3 h-3 rounded-full bg-violet-600 opacity-50 hover:opacity-100 transition-opacity nav-dot"></a>
+      <a href="#contact" class="w-3 h-3 rounded-full bg-violet-600 opacity-50 hover:opacity-100 transition-opacity nav-dot"></a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-900/80 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto p-4 flex items-center justify-between" data-aos="fade-down">
+        <a href="#hero" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-offset-2 ring-neutral-800">
+            <img src="./assets/Atharv_Sutar.jpg" alt="Atharv Sutar" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="font-semibold">Atharv Sutar</div>
+            <div class="text-xs text-neutral-400">Python • Flutter • AI/ML</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm text-neutral-300">
+          <a href="#about" class="hover:text-white transition hover:scale-105">About</a>
+          <a href="#projects" class="hover:text-white transition hover:scale-105">Projects</a>
+          <a href="#skills" class="hover:text-white transition hover:scale-105">Skills</a>
+          <a href="#contact" class="hover:text-white transition hover:scale-105">Contact</a>
+        </nav>
+        <a href="./assets/Atharv_Sutar_Resume.pdf" download class="hidden md:inline-block px-4 py-2 rounded-md bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-sm transition hover:scale-105">
+          <i class="fa-solid fa-download mr-2"></i>Resume
+        </a>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-neutral-300">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-neutral-800 p-4">
+        <nav class="flex flex-col gap-4 text-neutral-300">
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#skills" class="hover:text-white transition">Skills</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+          <a href="./assets/Atharv_Sutar_Resume.pdf" download class="text-violet-400 transition">
+            <i class="fa-solid fa-download mr-2"></i>Download Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pt-20">
+      <!-- HERO -->
+      <section id="hero" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center min-h-[85vh] py-8" data-aos="fade-up">
+        <div class="space-y-4">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="gradient-text">Atharv Sutar</span>.</h1>
+          <p class="text-neutral-300 max-w-xl">A passionate developer building practical software solutions with Python and Flutter — focused on AI/ML, sustainable design, and real-world impact. I enjoy turning data into insights and ideas into working apps.</p>
+
+          <div class="flex gap-3 mt-4">
+            <a href="./assets/Atharv_Sutar_Resume.pdf" download class="px-5 py-3 rounded-md bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium shadow transition hover:scale-105 flex items-center">
+              <i class="fa-solid fa-download mr-2"></i>Download Resume
+            </a>
+            <a href="#projects" class="px-5 py-3 rounded-md border border-neutral-700 text-neutral-200 transition hover:bg-neutral-800 flex items-center">
+              <i class="fa-solid fa-code mr-2"></i>See Projects
+            </a>
+          </div>
+
+          <div class="mt-6 flex gap-4">
+            <!-- GitHub -->
+            <a href="https://github.com/ATBlastDon" target="_blank" 
+              class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-violet-600 transition-all hover:scale-110">
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/atharv-sutar" target="_blank" 
+              class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-violet-600 transition-all hover:scale-110">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:atharvsutar3102003@gmail.com" 
+              class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-violet-600 transition-all hover:scale-110">
+              <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/atharvsutar2003?igsh=ejhqdG9uemE0bWE2" target="_blank" 
+              class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-pink-600 transition-all hover:scale-110">
+              <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/ATANYTHING" target="_blank" 
+              class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-sky-500 transition-all hover:scale-110">
+              <i class="fa-brands fa-telegram text-xl"></i>
+            </a>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-neutral-400">
+            <div class="flex items-center">
+              <i class="fa-solid fa-location-dot mr-2 text-violet-500"></i>
+              <div>
+                <span class="text-xs block">Location</span>
+                <strong class="text-white">Ratnagiri, Maharashtra</strong>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fa-solid fa-envelope mr-2 text-violet-500"></i>
+              <div>
+                <span class="text-xs block">Email</span>
+                <a class="text-white hover:underline" href="mailto:atharvsutar3102003@gmail.com">atharvsutar3102003@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center md:justify-end order-first md:order-last" data-aos="zoom-in">
+          <div class="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl glass p-1 floating">
+            <img src="./assets/Atharv_Sutar.jpg" alt="Atharv photo" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-12 border-t border-neutral-800" data-aos="fade-right">
+        <h2 class="text-3xl font-bold mb-2"><span class="gradient-text">About Me</span></h2>
+        <p class="mt-3 text-neutral-300 max-w-3xl">A passionate developer driven by technology's potential to solve real-world challenges. Committed to continuous learning and growth, I have intermediate proficiency in Python and a basic foundation in Flutter, with quick adaptability to expand my skills. My goal is to develop innovative, sustainable solutions that improve lives, focusing on ethical practices as I grow into a software engineer.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4" data-aos="fade-up">
+            <h3 class="font-semibold text-xl flex items-center">
+              <i class="fa-solid fa-graduation-cap mr-3 text-violet-500"></i>
+              Education & Certifications
+            </h3>
+            <ul class="text-sm text-neutral-300 space-y-3">
+              <li class="flex items-start">
+                <i class="fa-solid fa-circle-check mt-1 mr-3 text-green-500"></i>
+                <span>B.E. Computer Science (AI & ML) — CGPA 8.06</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-certificate mt-1 mr-3 text-blue-500"></i>
+                <span>Data Science — Acmegrade</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-certificate mt-1 mr-3 text-blue-500"></i>
+                <span>Machine Learning — TechNoHacks</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-certificate mt-1 mr-3 text-blue-500"></i>
+                <span>AI/ML — IBM SkillBuild</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-semibold text-xl flex items-center">
+            <i class="fa-solid fa-people-group mr-3 text-violet-500"></i>
+            Extracurriculars
+          </h3>
+
+          <!-- CR + Drama -->
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-star text-yellow-500 flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-neutral-300 leading-relaxed">
+              Class Representative for 4 years, active member of the drama team, and regular participant in college events — demonstrated leadership and teamwork skills.
+            </p>
+          </div>
+
+          <!-- Best Actor Award -->
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-award text-rose-500 flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-neutral-300 leading-relaxed">
+              Awarded <strong>Best Actor</strong> at Finolex College Annual Fest — recognized for creativity, confidence, and stage presence.
+            </p>
+          </div>
+
+          <!-- Cultural Events -->
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-masks-theater text-indigo-400 flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-neutral-300 leading-relaxed">
+              Performed in multiple cultural and drama competitions, showcasing adaptability, public speaking, and performance skills.
+            </p>
+          </div>
+
+          <!-- Tech + Non-tech Events -->
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-trophy text-emerald-400 flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-neutral-300 leading-relaxed">
+              Actively participated and won in both <strong>technical hackathons</strong> and <strong>non-technical events</strong>, balancing academics with creativity and leadership.
+            </p>
+          </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="py-12 border-t border-neutral-800" data-aos="fade-left">
+        <h2 class="text-3xl font-bold mb-6"><span class="gradient-text">Selected Projects</span></h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <!-- Project 1 -->
+            <article class="p-5 rounded-xl bg-neutral-800/40 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in">
+              <div>
+                <!-- Top icons -->
+                <div class="mb-4 flex justify-between items-center">
+                  <i class="fa-solid fa-mobile-screen-button text-3xl text-violet-500"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-neutral-400 group-hover:text-violet-500 transition"></i>
+                </div>
+                
+                <!-- Title + description -->
+                <h3 class="font-semibold text-lg">StudySync — Teacher App</h3>
+                <p class="mt-2 text-sm text-neutral-300">
+                  A Flutter app to improve student–teacher interactions with chat, notice board, 
+                  QR-based attendance, and face recognition for secure attendance. 
+                  Includes term work & IA marks management.
+                </p>
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="https://github.com/ATBlastDon/StudySync" target="_blank" 
+                  class="text-sm px-4 py-2 rounded-full bg-violet-700/80 hover:bg-violet-700 transition flex items-center">
+                  <i class="fa-brands fa-github mr-2"></i>View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="p-5 rounded-xl bg-neutral-800/40 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
+              <div>
+                <!-- Top icons -->
+                <div class="mb-4 flex justify-between items-center">
+                  <i class="fa-solid fa-book text-3xl text-violet-500"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-neutral-400 group-hover:text-violet-500 transition"></i>
+                </div>
+                
+                <!-- Title + description -->
+                <h3 class="font-semibold text-lg">Library Management (Python)</h3>
+                <p class="mt-2 text-sm text-neutral-300">
+                  A desktop GUI tool using Python Tkinter and pymysql with separate 
+                  admin & student interfaces to manage books and operations.
+                </p>
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="https://github.com/ATBlastDon/Library-Management" target="_blank" 
+                  class="text-sm px-4 py-2 rounded-full bg-violet-700/80 hover:bg-violet-700 transition flex items-center">
+                  <i class="fa-brands fa-github mr-2"></i>View on GitHub
+                </a>
+              </div>
+            </article>
+
+          </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-12 border-t border-neutral-800" data-aos="zoom-in">
+        <h2 class="text-3xl font-bold mb-6"><span class="gradient-text">Skills</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Technical Skills -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fa-solid fa-code mr-3 text-violet-500"></i>
+              Technical Skills
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Python</span>
+                  <span class="text-sm font-medium">85%</span>
+                </div>
+                <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                  <div class="bg-violet-600 h-2.5 rounded-full skill-bar" style="width: 0%" data-width="85%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Flutter</span>
+                  <span class="text-sm font-medium">75%</span>
+                </div>
+                <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                  <div class="bg-violet-600 h-2.5 rounded-full skill-bar" style="width: 0%" data-width="75%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">AI/ML</span>
+                  <span class="text-sm font-medium">70%</span>
+                </div>
+                <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                  <div class="bg-violet-600 h-2.5 rounded-full skill-bar" style="width: 0%" data-width="70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other Skills -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fa-solid fa-gears mr-3 text-violet-500"></i>
+              Other Skills
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-database mr-2 text-violet-400"></i>SQL
+              </span>
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-brands fa-git-alt mr-2 text-violet-400"></i>Git
+              </span>
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-fire mr-2 text-violet-400"></i>Firebase
+              </span>
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-people-line mr-2 text-violet-400"></i>Leadership
+              </span>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-4 flex items-center">
+              <i class="fa-solid fa-language mr-3 text-violet-500"></i>
+              Languages
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-language mr-2 text-violet-400"></i>English
+              </span>
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-language mr-2 text-violet-400"></i>Hindi
+              </span>
+              <span class="px-4 py-2 rounded-full bg-neutral-800/40 text-sm flex items-center">
+                <i class="fa-solid fa-language mr-2 text-violet-400"></i>Marathi
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-12 border-t border-neutral-800" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6"><span class="gradient-text">Contact</span></h2>
+        <p class="mt-2 text-neutral-300">Feel free to reach out for collaborations, internships or full-time opportunities.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-5 rounded-xl bg-neutral-800/30 hover:bg-neutral-800/50 transition transform hover:-translate-y-1 flex flex-col items-center text-center" data-aos="zoom-in">
+            <div class="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-envelope text-violet-500 text-xl"></i>
+            </div>
+            <h4 class="font-medium">Email</h4>
+            <a href="mailto:atharvsutar3102003@gmail.com" class="text-sm text-neutral-300 hover:underline mt-2">atharvsutar3102003@gmail.com</a>
+          </div>
+          
+          <div class="p-5 rounded-xl bg-neutral-800/30 hover:bg-neutral-800/50 transition transform hover:-translate-y-1 flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-phone text-violet-500 text-xl"></i>
+            </div>
+            <h4 class="font-medium">Phone</h4>
+            <div class="text-sm text-neutral-300 mt-2">+91-7776884373</div>
+          </div>
+          
+          <div class="p-5 rounded-xl bg-neutral-800/30 hover:bg-neutral-800/50 transition transform hover:-translate-y-1 flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="400">
+            <div class="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-plus text-violet-500 text-xl"></i>
+            </div>
+            <h4 class="font-medium">Find me</h4>
+            <div class="flex gap-4 mt-4">
+              <a href="https://github.com/ATBlastDon" target="_blank" class="w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center hover:bg-violet-600 transition-all hover:scale-110">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/atharv-sutar" target="_blank" class="w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center hover:bg-violet-600 transition-all hover:scale-110">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-8 text-center text-sm text-neutral-500 border-t border-neutral-800" data-aos="fade-up">
+        <p>Made with <i class="fa-solid fa-heart text-red-500"></i> • Built by Atharv Sutar • © 2025</p>
+      </footer>
+    </main>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-violet-600 shadow-lg flex items-center justify-center text-white opacity-0 invisible transition-all">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({ 
+        duration: 800, 
+        once: true,
+        offset: 100
+      });
+      
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+      
+      // Close mobile menu when clicking links
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
+      
+      // Back to top button
+      const backToTopButton = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove('opacity-0', 'invisible');
+          backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopButton.classList.remove('opacity-100', 'visible');
+          backToTopButton.classList.add('opacity-0', 'invisible');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // Animate skill bars on scroll
+      function animateSkillBars() {
+        const skillBars = document.querySelectorAll('.skill-bar');
+        skillBars.forEach(bar => {
+          const width = bar.getAttribute('data-width');
+          bar.style.width = width;
+        });
+      }
+      
+      // Use Intersection Observer to trigger skill bar animation
+      const skillsSection = document.getElementById('skills');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateSkillBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      if (skillsSection) {
+        observer.observe(skillsSection);
+      }
+      
+      // Update navigation dots on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navDots = document.querySelectorAll('.nav-dot');
+        
+        let currentSection = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (pageYOffset >= sectionTop - 200) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+        
+        navDots.forEach(dot => {
+          dot.classList.remove('active');
+          if (dot.getAttribute('href').substring(1) === currentSection) {
+            dot.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
