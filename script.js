@@ -187,3 +187,10 @@ document.addEventListener('click', function(e) {
     botChat.classList.remove('open');
   }
 });
+
+if (botButton) {
+  botButton.addEventListener('click', () => {
+    // Redirect to the bot folder's index.html
+    window.location.href = "./bot/index.html";
+  });
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATB — Atharv's AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notification" id="notification"></div>
+    <div class="chat-container">
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <!-- Back Button -->
+                <button id="backButton" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2>ATB Assistant</h2>
+                <p>Your guide to Atharv's portfolio</p>
+            </div>
+
+            <div class="quick-questions">
+                <h3><i class="fas fa-bolt"></i> Quick Questions</h3>
+                <button class="question-btn">Tell me about Atharv's education</button>
+                <button class="question-btn">What are his technical skills?</button>
+                <button class="question-btn">Show me his projects</button>
+                <button class="question-btn">What are his career goals?</button>
+                <button class="question-btn">How can I contact him?</button>
+                <button class="question-btn">Tell me about his achievements</button>
+            </div>
+            <div class="chat-controls">
+                <button class="control-btn" id="clearChat"><i class="fas fa-trash"></i> Clear Chat</button>
+                <button class="control-btn" id="exportChat"><i class="fas fa-download"></i> Export</button>
+            </div>
+        </div>
+        
+        <div class="chat-area">
+
+            <div class="chat-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <i class="fas fa-comments"></i>
+                    <h1>Chat with ATB</h1>
+                </div>
+                <div class="chat-status">
+                    <span id="connectionStatus"><i class="fas fa-circle" style="color: #4CAF50;"></i> Connected</span>
+                </div>
+            </div>
+
+            <div class="messages" id="messages">
+                <div class="welcome-message">
+                    <h3>Hello! I'm ATB, your AI assistant for Atharv Balwant Sutar</h3>
+                    <p>Ask me about his skills, projects, education, or anything else!</p>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Ask about Atharv (e.g. 'Tell me about StudySync')" autocomplete="off">
+                <button id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
